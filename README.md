@@ -83,7 +83,7 @@ Os pesos somam **1.0** no total. Parte deles é fixa e parte é definida pelo us
 
 **Pré-requisitos:**
 ```bash
-requirements.txt
+pip install -r requirements.txt
 ```
 
 **Execução:**
