@@ -37,6 +37,8 @@ O sistema também aprende ao longo do uso: após cada recomendação, o caso res
 cbr-sport-recommendation/
 │
 ├── requirements.txt  # Bibliotecas e versões usadas no projeto
+├── viariables.txt    # Atributos, pesos e valores possíveis
+├── tests.txt         # Caso previamente calculado para teste do programa
 ├── main.py           # Fluxo principal do sistema
 ├── similarity.py     # Dicionário de similaridades locais por atributo
 ├── library.csv       # Base de casos (biblioteca)
