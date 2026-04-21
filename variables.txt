@@ -1,0 +1,9 @@
+Atributos, pesos e valores possíveis:
+
+Idade (peso 0,20): Criança, Adolescente, Adulto, Idoso
+Problema físico (peso 0,20): Nenhum, Mental, Respiratório, Mobilidade
+Preferência (definido pelo usuário): Individual, Coletivo
+Local (definido pelo usuário): Aberto, Fechado, Indiferente
+Disponibilidade (peso 0,10): 1x, 2x, 3x, 4x, 5x por semana
+Objetivo (definido pelo usuário): Saúde, Competição, Lazer
+Orçamento (peso 0,10): Baixo, Médio, Alto

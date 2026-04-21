@@ -1,0 +1,61 @@
+================================================================================
+  ARQUIVO: cases.csv  (caso de teste)
+================================================================================
+ 
+Idade,Problema_Fisico,Preferencia,Local,Disponibilidade,Objetivo,Orcamento
+Adulto,Respiratorio,Individual,Aberto,3x,Saude,Medio
+ 
+================================================================================
+  CÁLCULO DE SIMILARIDADE — CASO DE TESTE
+================================================================================
+ 
+Caso novo: Adulto | Respiratorio | Individual | Aberto | 3x/semana | Saude | Medio
+ 
+Pesos utilizados:
+  Idade           = 0.20 (fixo)
+  Problema_Fisico = 0.20 (fixo)
+  Disponibilidade = 0.10 (fixo)
+  Orcamento       = 0.10 (fixo)
+  Preferencia     = 0.10 (definido pelo usuário)
+  Local           = 0.10 (definido pelo usuário)
+  Objetivo        = 0.10 (definido pelo usuário)
+  TOTAL           = 1.00
+ 
+Similaridade com cada caso da biblioteca:
+(colunas: Idade | Prob.Fisico | Preferencia | Local | Dispon. | Objetivo | Orcamento | TOTAL)
+ 
+ #   Esporte        Idade  Prob   Pref  Local  Disp   Obj    Orc   TOTAL
+ 1   Futebol         0.2   0.5    0.0   1.0    1.0    0.5    0.5   0.4400
+ 2   Natacao         0.5   0.5    1.0   0.0    0.5    0.2    0.5   0.4200
+ 3   Natacao         1.0   1.0    1.0   0.0    0.8    1.0    1.0   0.7800  ← 1º (Natação)
+ 4   Caminhada       0.5   0.2    1.0   1.0    0.8    1.0    0.5   0.5700
+ 5   Volei           1.0   0.5    0.0   1.0    1.0    0.5    0.5   0.6000
+ 6   Natacao         0.2   0.2    0.0   0.0    0.8    1.0    1.0   0.3600
+ 7   Basquete        0.5   0.5    0.0   1.0    0.5    0.2    1.0   0.4700
+ 8   Musculacao      1.0   0.5    1.0   0.0    0.8    1.0    0.5   0.6300
+ 9   Handebol        0.2   0.5    0.0   0.8    0.8    0.5    0.5   0.4000
+10   Yoga            0.5   0.2    1.0   1.0    1.0    1.0    0.5   0.5900
+11   Natacao         1.0   0.2    1.0   0.0    1.0    1.0    1.0   0.6400
+12   Ciclismo        0.5   0.5    1.0   1.0    0.8    0.2    1.0   0.6000
+13   Volei           1.0   0.5    0.0   1.0    0.8    0.2    0.5   0.5500
+14   Yoga            0.5   1.0    1.0   1.0    0.8    1.0    0.5   0.7300  ← 2º (Yoga)
+15   Corrida         1.0   0.5    1.0   1.0    1.0    0.5    0.5   0.7000
+16   Basquete        0.5   0.2    0.0   0.8    1.0    0.5    1.0   0.4700
+17   Volei           0.2   0.5    0.0   0.8    0.8    0.5    0.5   0.4000
+18   Caminhada       0.5   1.0    1.0   1.0    0.8    1.0    0.5   0.7300  ← 3º (Caminhada)
+ 
+RESULTADO FINAL (top 3 com esportes únicos):
+  1º lugar → Caso #3  | Natacao    | Similaridade: 0.7800
+  2º lugar → Caso #14 | Yoga       | Similaridade: 0.7300
+  3º lugar → Caso #18 | Caminhada  | Similaridade: 0.7300
+ 
+Justificativa do 1º lugar (Caso #3 — Natação):
+  Adulto × Adulto          → sim=1.0 × peso=0.20 = 0.20
+  Respiratorio × Respiratorio → sim=1.0 × peso=0.20 = 0.20
+  Individual × Individual  → sim=1.0 × peso=0.10 = 0.10
+  Aberto × Fechado         → sim=0.0 × peso=0.10 = 0.00 
+  3x × 2x                  → sim=0.8 × peso=0.10 = 0.08
+  Saude × Saude            → sim=1.0 × peso=0.10 = 0.10
+  Medio × Medio            → sim=1.0 × peso=0.10 = 0.10
+                                                   ------
+                                             TOTAL = 0.78
